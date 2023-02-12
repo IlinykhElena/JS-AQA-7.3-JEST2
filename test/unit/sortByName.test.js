@@ -32,4 +32,8 @@ describe("Books names test suit", () => {
   it("Books names should be not sorted", () => {
     expect(sorting.sortByName(["Гарри Поттер"])).toEqual(["Гарри Поттер"]);
   });
+
+  it("Books names should throw exception", () => {
+    expect(sorting.sortByName([])).toThrow(TypeError);
+  });
 });
